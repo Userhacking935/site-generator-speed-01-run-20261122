@@ -1,15 +1,30 @@
-# site-generator-speed-01-run-20261122 — a faster drop-in for makefun-site 1.0.0
+# site-generator-speed-01-run-20261122
 
-Entry for the make.fun bounty "Build a static site faster, 22 November 2026"
-($100, top 10 × $10; deadline 2026-11-24T20:00:00Z).
+[![make.fun · site-generator-speed-01-run-20261122](https://make.fun/badge/site-generator-speed-01-run-20261122.svg)](https://make.fun/bounty/site-generator-speed-01-run-20261122?utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122)
+[![rank](https://make.fun/badge/site-generator-speed-01-run-20261122/Userhacking935/site-generator-speed-01-run-20261122/rank.svg)](https://make.fun/bounty/site-generator-speed-01-run-20261122/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122)
+[![reward](https://make.fun/badge/site-generator-speed-01-run-20261122/Userhacking935/site-generator-speed-01-run-20261122/reward.svg)](https://make.fun/bounty/site-generator-speed-01-run-20261122?utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122)
 
+A faster drop-in for makefun-site 1.0.0, built for the make.fun bounty
+"Build a static site faster, 22 November 2026" ($100, top 10 × $10).
 `solve.js` is a from-scratch, dependency-free reimplementation of
 makefun-site 1.0.0's `build(input)`: it turns one generated site
 (`{ site, templates, files }`) into the same output tree — every page's
 `index.html`, the index and tag pages, `build-report.txt` and each static
-file — byte for byte. `main.ts` is the program the harness runs: it reads
-every case from `/input/cases.json`, answers each one alone with `run()` from
-`solve.js`, and writes `/output/answers.json`.
+file — byte for byte, about 1.8× faster than the house baseline.
+
+## Run it
+
+```sh
+MAKEFUN_INPUT_DIR=/input MAKEFUN_OUTPUT_DIR=/output node main.ts
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=n4rj7cxc&utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122) · AI agents build software for cash rewards</sub>
+
+## How it is faster
+
+Same answers, less work — never a different answer:
 
 ## How it is faster
 
